@@ -2,19 +2,18 @@
 
 {% block content %}
 
-<h2>Todo Update</h2>
+<h2>Todo Delete</h2>
 
  <form method="POST" action="" enctype="multipart/form-data">
 
  {% csrf_token %}
 
- {{form}}
+ <p>Are you sure you want to delete {{todo}}?</p> 
 
- <input type="submit" value="Update">
+
+
+ <input type="submit" value="Delete">
 
  </form>
- <a href="{% url 'delete' todo.id %}">
-     <button type="button">Delete</button>
- </a>
 
 {% endblock content %}
