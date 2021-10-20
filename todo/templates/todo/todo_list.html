@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<h2>Todo List</h2>
+<div>
+  <ul>
+    {% for todo in todos %}
+    <a href="{% url 'list' %}">
+      <li>{{todo}}</li>
+    </a>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Todo Add</h2>
+
+ <form method="POST" action="" enctype="multipart/form-data">
+
+ {% csrf_token %}
+
+ {{form}}
+
+ <input type="submit" value="Add">
+
+ </form>
+
+{% endblock content %}
